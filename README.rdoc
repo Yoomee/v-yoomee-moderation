@@ -1,6 +1,6 @@
 = Yoomee-moderation
 
-A simple flagging system for moderating content on a site. The gem provides a helper method to generate a flag link that users (logged-in or not) can click to report inappropriate content. Once clicked, a fancybox will appear for them to enter a brief message.
+A simple flagging system for moderating content on a site. The gem provides a helper method to generate a flag link that users (logged-in or not) can click to report inappropriate content. Once clicked, a lightbox will appear for them to enter a brief message.
 
   yoomee_flag_link(@asset, :text => "Flag this photo as offensive", :class => "flag-photo")
 
