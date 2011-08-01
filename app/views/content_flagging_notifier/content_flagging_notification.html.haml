@@ -18,7 +18,4 @@
   
 %p
   You can view the flagged content here:
-  -if @attachable
-    =link_to_url(polymorphic_url(@attachable))
-  -else
-    =link_to_url(content_flag_url(@content_flagging.content_flag))
+  =view_flagged_content_url(@content_flagging, @attachable)

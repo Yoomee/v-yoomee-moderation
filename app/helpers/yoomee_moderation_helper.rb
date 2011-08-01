@@ -42,6 +42,18 @@ module YoomeeModerationHelper
     content_tag(:span, content_flag_type, :class => "content_flag_type_label", :style => "background-color:#{content_flag_type.try(:color) || "#2795E4"}")
   end
   
+  def view_flagged_content_url(content_flagging, attachable=nil)
+    if attachable
+      begin
+        polymorphic_url(attachable)
+      rescue
+        "Couldn't generate url"
+      end
+    else
+      content_flag_url(content_flagging.content_flag)
+    end
+  end
+  
   def include_yoomee_fancybox_js
     return true if @included_ymfb_js
     content_for :head do

@@ -19,7 +19,4 @@
   ="The person who flagged the content gave their email address: #{@content_flagging.email}"
   
 You can view the flagged content here:
--if @attachable
-  =polymorphic_url(@attachable)
--else
-  =content_flag_url(@content_flagging.content_flag)
+=view_flagged_content_url(@content_flagging, @attachable)
