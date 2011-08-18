@@ -4,11 +4,11 @@ Gem::Specification.new do |s|
   s.name = "yoomee-moderation"
   s.summary = "Gem for adding Yoomee's moderation tools to a site"
   s.description = ""
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   
   s.add_dependency("haml")
   s.add_dependency("googlecharts")
-  s.add_dependency("rails", '3.0.3')
+  s.add_dependency("rails", '>=3.0.3')
   s.add_dependency('mysql')
   
   s.add_development_dependency('shoulda')
