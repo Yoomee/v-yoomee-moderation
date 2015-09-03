@@ -2,7 +2,7 @@ class ModerationBaseController < ApplicationController
   
   helper :read_more_truncate
 
-  class_inheritable_hash :permission_levels
+  class_attribute :permission_levels
   self.permission_levels = {}
 
   before_filter :gate_keep
